@@ -29,7 +29,7 @@ import {
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
     const [image, setImage] = useState(null);
-    const [post, setReview] = useState("");
+    const [review, setReview] = useState("");
     const { palette } = useTheme();
     const { _id } = useSelector((state) => state.user);
     const token = useSelector((state) => state.token);
@@ -40,7 +40,7 @@ import {
     const handleReview = async () => {
       const formData = new FormData();
       formData.append("userId", _id);
-      formData.append("description", post);
+      formData.append("description", review);
       if (image) {
         formData.append("picture", image);
         formData.append("picturePath", image.name);
@@ -64,7 +64,7 @@ import {
           <InputBase
             placeholder="Share your favorite restaurants with Image for friends"
             onChange={(e) => setReview(e.target.value)}
-            value={post}
+            value={review}
             sx={{
               width: "100%",
               backgroundColor: palette.neutral.light,
@@ -131,7 +131,7 @@ import {
             </Typography>
           </FlexBetween>
           <Button
-            disabled={!post}
+            disabled={!review}
             onClick={handleReview}
             sx={{
               color: "white",

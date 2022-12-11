@@ -4,8 +4,6 @@ import Navbar from "scenes/navbar";
 import UserWidget from "scenes/widgets/UserWidget";
 import MyReviewWidget from "scenes/widgets/MyReviewWidget";
 import ReviewsWidget from "scenes/widgets/ReviewsWidget";
-// import AdvertWidget from "scenes/widgets/AdvertWidget";
-import FriendListWidget from "scenes/widgets/FriendListWidget";
 
 const ReviewPage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
